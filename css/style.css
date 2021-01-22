@@ -163,7 +163,6 @@
 /* ===== section items ===== */
 
 .section-items {
-   text-align: center;
    margin-top: 96px;
 }
 
@@ -179,6 +178,7 @@
    color: var(--gray);
    line-height: 36px;
 }
+
 .text-items {
    margin-top: 6px;
    padding-bottom: 18px;
@@ -199,11 +199,13 @@
    font-size: 13px;
    line-height: 15.6px;
 }
+
 .block-item-text-card {
    margin-left: 18px;
    font-weight: 300;
    color: var(--text-card);
 }
+
 .block-item-price-card {
    margin-left: 18px;
    margin-top: 18px;
