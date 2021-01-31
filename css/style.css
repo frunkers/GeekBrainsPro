@@ -3,6 +3,9 @@
 :root {
    --white: #ffffff;
    --bg-card: #f8f8f8;
+   --bg-arrivals: #f8f3f4;
+   --text-arrivals: #636363;
+   --wearing-list: #6f6e6e;
    --light-gray: #9f9f9f;
    --text-card: #5d5d5d;
    --gray: #222222;
@@ -318,6 +321,7 @@
 }
 
 .button-items-link {
+   display: block;
    background: transparent;
    margin-top: 48px;
    padding: 14px 38px;
@@ -366,6 +370,7 @@
 }
 
 .advantages-menu-item-text {
+   text-align: center;
    padding-top: 16px;
    font-weight: 300;
    color: var(--text-advantages);
@@ -412,6 +417,7 @@
 .subscribe-block-wrapper {
    width: 360px;
    padding-top: 50px;
+   margin-right: 100px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -508,4 +514,87 @@
 .social-item:hover {
    background: var(--pink);
    color: var(--white);
+}
+
+/* ========== catalog html ========== */
+
+/* ===== section arrivals ===== */
+
+.section-arrivals {
+   padding: 60px 0;
+   background: var(--bg-arrivals);
+}
+
+.section-arrivals-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.text-arrivals {
+   font-size: 24px;
+   color: var(--pink);
+   line-height: 29px;
+}
+
+.arrivals-menu {
+   display: flex;
+}
+
+.arrivals-menu-item-link {
+   font-size: 14px;
+   color: var(--text-arrivals);
+   font-weight: 300;
+   line-height: 17px;
+}
+.arrivals-menu-item-link-active {
+   color: var(--pink);
+   font-weight: 700;
+}
+
+.arrivals-menu-item-sabrer {
+   padding: 0 5px;
+   font-weight: 300;
+   color: var(--text-arrivals);
+}
+
+/* ===== filter wearing ===== */
+
+.filter-items-wrapper {
+   width: 100%;
+   margin-top: -44px;
+   padding-bottom: 35px;
+   display: flex;
+   align-items: center;
+}
+
+.filter-wearing-wrap {
+   display: flex;
+   align-items: center;
+}
+
+.button-filter-wearing {
+   background: transparent;
+   border: none;
+   cursor: pointer;
+}
+
+.filter-wearing {
+   margin-right: 10px;
+   font-size: 14px;
+   font-weight: 700;
+   line-height: 17px;
+}
+
+.wearing-list {
+   margin-left: 5px;
+   font-size: 14px;
+   color: var(--wearing-list);
+   line-height: 17px;
+   border: none;
+   cursor: pointer;
+}
+
+.size-wearing-wrap {
+   margin-left: 315px;
 }
