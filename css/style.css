@@ -12,6 +12,9 @@
    --black: #000000;
    --bg-advantages: #222224;
    --text-advantages: #fbfbfb;
+   --text-collection: #4d4d4d;
+   --text-collection-p: #5e5e5e;
+   --text-collection-price: #ef5b70;
    --bg-email: #e1e1e1;
    --light-pink: #f1e4e6;
    --pink: #f16d7f;
@@ -110,7 +113,7 @@
    display: block;
    font-size: 32px;
    font-weight: 700;
-   line-height: 38.4px;
+   line-height: 38px;
 }
 
 /* ===== section common ===== */
@@ -211,6 +214,7 @@
 }
 
 .block-items {
+   width: 100%;
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
@@ -597,4 +601,145 @@
 
 .size-wearing-wrap {
    margin-left: 315px;
+}
+
+/* ========== product html ========== */
+
+/* ===== section slider ===== */
+
+.section-slider {
+   width: 100%;
+   height: 777px;
+   background: url(/img/slider.png) center center no-repeat;
+}
+
+/* ===== section women collection ===== */
+
+.section-women-container {
+   margin-top: -65px;
+   padding: 65px 0;
+   display: flex;
+   flex-wrap: wrap;
+   border: 1px solid #eaeaea;
+   background: var(--white);
+}
+
+.heading-collection {
+   position: relative;
+   width: 100%;
+   text-align: center;
+   color: var(--pink);
+   font-size: 14px;
+   font-weight: 300;
+   line-height: 17px;
+}
+
+.heading-collection::after {
+   content: "";
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 64px;
+   height: 4px;
+   background: var(--text-collection-price);
+   bottom: -12px;
+}
+
+.moschino {
+   padding-top: 26px;
+   width: 100%;
+   text-align: center;
+   color: var(--text-collection);
+   font-size: 18px;
+   font-weight: 300;
+   line-height: 22px;
+}
+
+.text-collection {
+   padding: 48px 292px 32px 292px;
+   width: 100%;
+   text-align: center;
+   color: var(--text-collection-p);
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 17px;
+}
+
+.price-collection {
+   position: relative;
+   width: 100%;
+   text-align: center;
+   color: var(--text-collection-price);
+   font-weight: 300;
+   font-size: 24px;
+   line-height: 29px;
+}
+
+.price-collection::after {
+   content: "";
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 641px;
+   height: 1px;
+   background: #eaeaea;
+   bottom: -65px;
+}
+
+.list-collection-wrap {
+   padding-top: 130px;
+   width: 100%;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.collection-btn {
+   margin: 48px auto 0 auto;
+   padding: 14px 56px 14px 24px;
+   display: flex;
+   align-items: center;
+   background: transparent;
+   border: 1px solid var(--button-pink);
+   cursor: pointer;
+}
+
+.collection-btn-svg {
+   fill: var(--text-collection-price);
+}
+
+.collection-btn-text {
+   padding-left: 24px;
+   color: var(--button-pink-text);
+   font-size: 16px;
+   line-height: 20px;
+}
+
+.collection-btn:hover {
+   background: var(--pink);
+}
+
+.collection-btn:hover .collection-btn-svg {
+   fill: var(--white);
+}
+
+.collection-btn:hover .collection-btn-text {
+   color: var(--white);
+}
+
+.collection-btn:active {
+   background: transparent;
+}
+
+.collection-btn:active .collection-btn-svg {
+   fill: var(--text-collection-price);
+}
+
+.collection-btn:active .collection-btn-text {
+   color: var(--button-pink-text);
+}
+
+.section-subcribe-product {
+   margin-top: 130px;
 }
