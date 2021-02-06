@@ -97,7 +97,7 @@
    display: block;
    font-size: 48px;
    font-weight: 900;
-   line-height: 57.6px;
+   line-height: 58px;
    position: relative;
 }
 
@@ -194,6 +194,10 @@
 
 .section-items {
    margin-top: 95px;
+}
+
+.section-items-catalog {
+   margin-top: 0;
 }
 
 .section-items-container {
@@ -314,7 +318,7 @@
    display: block;
    margin: 25px 0 13px 0;
    font-size: 13px;
-   line-height: 15.6px;
+   line-height: 16px;
 }
 
 .block-item-text-card {
@@ -581,10 +585,9 @@
 
 /* ===== filter wearing ===== */
 
-.filter-items-wrapper {
+.section-filter-container {
+   padding: 50px 0 35px 0;
    width: 100%;
-   margin-top: -44px;
-   padding-bottom: 35px;
    display: flex;
    align-items: center;
 }
