@@ -356,6 +356,7 @@
 .advantages-menu {
    display: flex;
    justify-content: space-between;
+   flex-wrap: wrap;
 }
 
 .advantages-menu-item {
@@ -551,21 +552,31 @@
    display: flex;
 }
 
+.arrivals-menu-item:nth-child(1) > .arrivals-menu-item-link::before {
+   content: "";
+}
+
 .arrivals-menu-item-link {
-   font-size: 14px;
+   margin-left: 15px;
    color: var(--text-arrivals);
+   font-size: 14px;
    font-weight: 300;
    line-height: 17px;
+   position: relative;
 }
+
+.arrivals-menu-item-link::before {
+   content: "/";
+   top: 0;
+   left: -10px;
+   position: absolute;
+   color: var(--text-arrivals);
+   font-weight: 300;
+}
+
 .arrivals-menu-item-link-active {
    color: var(--pink);
    font-weight: 700;
-}
-
-.arrivals-menu-item-sabrer {
-   padding: 0 5px;
-   font-weight: 300;
-   color: var(--text-arrivals);
 }
 
 /* ===== filter wearing ===== */
