@@ -29,6 +29,10 @@
    --button-quote: #4a4a4a;
    --background-total: #f5f3f3;
    --hr-total: #e2e2e2;
+   --hover-button: #cb5464;
+   --header-icon: #e8e8e8;
+   --transition-hover: 0.3s;
+   --transition-active: 0s;
 }
 
 .container {
@@ -68,10 +72,21 @@
    align-items: center;
 }
 
-.page-header-icon-magnifier,
-.page-header-icon-btn,
-.page-header-icon-account,
-.page-header-icon-cart {
+.header-icon {
+   fill: var(--header-icon);
+   transition: var(--transition-hover);
+}
+
+.header-icon:hover {
+   fill: var(--placeholder-adress);
+}
+
+.header-icon:active {
+   fill: var(--header-icon);
+   transition: var(--transition-active);
+}
+
+.page-header-icon-btn {
    border: none;
    background: transparent;
    cursor: pointer;
@@ -210,25 +225,25 @@
 
 .section-items-container {
    display: flex;
-   flex-direction: column;
-   align-items: center;
+   flex-wrap: wrap;
 }
 
 .title-items {
-   display: block;
-   text-align: center;
+   width: 100%;
    font-size: 30px;
    color: var(--gray);
    line-height: 36px;
+   text-align: center;
 }
 
 .text-items {
+   width: 100%;
    margin-top: 6px;
    padding-bottom: 18px;
-   text-align: center;
    font-size: 14px;
    color: var(--light-gray);
    line-height: 17px;
+   text-align: center;
 }
 
 .block-items {
@@ -250,7 +265,7 @@
 }
 
 .block-items-card-img-wrap::before {
-   transition: 0.3s;
+   transition: var(--transition-hover);
    content: "";
    position: absolute;
    height: 100%;
@@ -279,6 +294,7 @@
    background: transparent;
    border: 1px solid var(--white);
    cursor: pointer;
+   transition: var(--transition-hover);
 }
 
 .block-item-btn:hover {
@@ -297,18 +313,22 @@
 .block-item-btn:active {
    background: transparent;
    border: 1px solid var(--white);
+   transition: var(--transition-active);
 }
 
 .block-item-btn:active .block-item-card-button {
    fill: var(--white);
+   transition: var(--transition-active);
 }
 
 .block-item-btn:active .block-item-btn-text {
    color: var(--white);
+   transition: var(--transition-active);
 }
 
 .block-item-card-button {
    fill: var(--white);
+   transition: var(--transition-hover);
 }
 
 .block-item-btn-text {
@@ -316,10 +336,11 @@
    font-size: 14px;
    color: var(--white);
    line-height: 17px;
+   transition: var(--transition-hover);
 }
 
 .offer-item-card {
-   margin-left: 18px;
+   padding-left: 18px;
 }
 
 .block-item-heading-card {
@@ -343,19 +364,23 @@
 }
 
 .button-items-link {
-   display: block;
-   background: transparent;
-   margin-top: 48px;
+   margin: 48px auto 0 auto;
    padding: 14px 38px;
-   font-size: 16px;
+   background: transparent;
    color: var(--button-pink-text);
    border: 1px solid var(--button-pink);
-   transition: 0.3s;
+   transition: var(--transition-hover);
 }
 
 .button-items-link:hover {
    background: var(--pink);
    color: var(--white);
+}
+
+.button-items-link:active {
+   color: var(--button-pink-text);
+   background: transparent;
+   transition: var(--transition-active);
 }
 
 /* ===== section advantages ===== */
@@ -404,7 +429,7 @@
 
 .section-subcribe {
    padding: 100px 0 148px 0;
-   background: url(/img/subscribe.png) no-repeat center;
+   background: url(../img/subscribe.png) no-repeat center;
 }
 
 .section-subcribe-container {
@@ -412,17 +437,19 @@
    justify-content: space-between;
 }
 
+.section-subcribe-m-top {
+   margin-top: 128px;
+}
+
 .quote-block-wrapper {
    width: 360px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
 }
 
 .quote-block-image {
    width: 96px;
    height: 96px;
-   background: url(/img/quote-image.png);
+   margin: 0 auto;
+   background: url(../img/quote-image.png);
 }
 
 .quote {
@@ -441,9 +468,7 @@
    width: 360px;
    padding-top: 50px;
    margin-right: 100px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+   text-align: center;
 }
 
 .subscribe-block-heading {
@@ -461,13 +486,14 @@
 
 .email-form-subcribe-wrapper {
    position: relative;
-   margin-top: 32px;
+   width: 355px;
+   margin: 32px auto 0 auto;
 }
 
 .email-subcribe {
    width: 355px;
    height: 50px;
-   padding: 15px 64px 15px 22px;
+   padding: 15px 22px;
    background: var(--bg-email);
    border-radius: 200px;
    border: none;
@@ -493,6 +519,16 @@
    border-bottom-right-radius: 200px;
    border: none;
    cursor: pointer;
+   transition: var(--transition-hover);
+}
+
+.button-subcribe:hover {
+   background: var(--hover-button);
+}
+
+.button-subcribe:active {
+   background: var(--button-subcribe);
+   transition: var(--transition-active);
 }
 
 /* ===== page footer ===== */
@@ -502,7 +538,7 @@
 }
 
 .page-footer-container {
-   height: 80px;
+   padding: 24px 0;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -522,7 +558,7 @@
    height: 32px;
    margin-left: 8px;
    margin-left: 8;
-   transition: 0.3s;
+   transition: var(--transition-hover);
    background: var(--white);
    display: flex;
    align-items: center;
@@ -537,6 +573,12 @@
 .social-item:hover {
    background: var(--pink);
    color: var(--white);
+}
+
+.social-item:active {
+   background: var(--white);
+   color: var(--black);
+   transition: 0s;
 }
 
 /* ========== catalog html ========== */
@@ -619,7 +661,7 @@
 }
 
 .wearing-list {
-   margin-left: 5px;
+   margin-left: 10px;
    font-size: 14px;
    color: var(--wearing-list);
    line-height: 17px;
@@ -648,13 +690,14 @@
    padding: 65px 0;
    display: flex;
    flex-wrap: wrap;
+   justify-content: center;
    border: 1px solid var(--border-decoration);
    background: var(--white);
 }
 
 .heading-collection {
-   position: relative;
    width: 100%;
+   position: relative;
    text-align: center;
    color: var(--pink);
    font-size: 14px;
@@ -674,8 +717,8 @@
 }
 
 .moschino {
-   padding-top: 26px;
    width: 100%;
+   margin-top: 26px;
    text-align: center;
    color: var(--text-collection);
    font-size: 18px;
@@ -684,8 +727,8 @@
 }
 
 .text-collection {
-   padding: 48px 292px 32px 292px;
-   width: 100%;
+   margin: 48px 0 32px 0;
+   width: 555px;
    text-align: center;
    color: var(--text-collection-p);
    font-weight: 300;
@@ -708,18 +751,16 @@
    position: absolute;
    left: 50%;
    transform: translateX(-50%);
-   width: 641px;
+   width: 640px;
    height: 1px;
    background: var(--border-decoration);
    bottom: -65px;
 }
 
 .list-collection-wrap {
-   padding-top: 130px;
    width: 100%;
-   margin: 0 auto;
+   margin: 130px auto 0 auto;
    display: flex;
-   align-items: center;
    justify-content: center;
 }
 
@@ -731,10 +772,12 @@
    background: transparent;
    border: 1px solid var(--button-pink);
    cursor: pointer;
+   transition: var(--transition-hover);
 }
 
 .collection-btn-svg {
    fill: var(--text-collection-price);
+   transition: var(--transition-hover);
 }
 
 .collection-btn-text {
@@ -742,6 +785,7 @@
    color: var(--button-pink-text);
    font-size: 16px;
    line-height: 20px;
+   transition: var(--transition-hover);
 }
 
 .collection-btn:hover {
@@ -758,18 +802,17 @@
 
 .collection-btn:active {
    background: transparent;
+   transition: var(--transition-active);
 }
 
 .collection-btn:active .collection-btn-svg {
    fill: var(--text-collection-price);
+   transition: var(--transition-active);
 }
 
 .collection-btn:active .collection-btn-text {
    color: var(--button-pink-text);
-}
-
-.section-subcribe-product {
-   margin-top: 130px;
+   transition: var(--transition-active);
 }
 
 /* ========== cart html ========== */
@@ -777,7 +820,7 @@
 /* ===== section cart ===== */
 
 .section-cart {
-   padding: 56px 0 128px 0;
+   padding-top: 56px;
 }
 
 .section-cart-container {
@@ -866,6 +909,7 @@
    border: 1px solid var(--border-controls-cart);
    background: transparent;
    cursor: pointer;
+   transition: var(--transition-hover);
 }
 
 .button-controls-cart:hover {
@@ -876,6 +920,7 @@
 .button-controls-cart:active {
    background: transparent;
    color: var(--black);
+   transition: var(--transition-active);
 }
 
 .block-shipping-adress {
@@ -927,6 +972,7 @@
    font-size: 11px;
    line-height: 13px;
    cursor: pointer;
+   transition: var(--transition-hover);
 }
 
 .button-shipping-adress:hover {
@@ -937,6 +983,7 @@
 .button-shipping-adress:active {
    background: transparent;
    color: var(--button-quote);
+   transition: var(--transition-active);
 }
 
 .block-total {
@@ -986,6 +1033,7 @@
    border: none;
    color: var(--white);
    cursor: pointer;
+   transition: var(--transition-hover);
 }
 
 .button-checkout-total::before {
@@ -1004,4 +1052,112 @@
 
 .button-checkout-total:active {
    background: var(--pink);
+   transition: var(--transition-active);
+}
+
+/* ========== registration html ========== */
+
+/* ===== section registration ===== */
+
+.section-registration {
+   margin: 64px 0 96px 0;
+}
+
+.section-registration-container {
+   display: flex;
+}
+
+.registration-form-fieldset {
+   display: flex;
+   flex-direction: column;
+   border: none;
+}
+
+.registration-radio-name {
+   display: flex;
+   margin: 30px 0 35px 0;
+}
+
+.name-radio {
+   display: flex;
+   align-items: center;
+}
+
+.name-radio-heading {
+   padding-left: 10px;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 13px;
+}
+
+.text-registration {
+   margin-top: 15px;
+   width: 360px;
+   font-weight: 300;
+   font-size: 13px;
+   line-height: 16px;
+   color: var(--placeholder-adress);
+}
+
+.radio-button-name {
+   height: 17px;
+   width: 17px;
+}
+
+.female {
+   margin-left: 20px;
+}
+
+.button-join-registration {
+   margin-top: 40px;
+   background: var(--pink);
+   border: none;
+   padding: 16px 30px;
+   font-size: 14px;
+   line-height: 17px;
+   color: var(--white);
+   cursor: pointer;
+   transition: var(--transition-hover);
+}
+
+.button-join-registration:hover {
+   background: var(--button-subcribe);
+}
+
+.button-join-registration:active {
+   background: var(--pink);
+   transition: var(--transition-active);
+}
+
+.block-loyalty {
+   padding-left: 128px;
+}
+
+.loyalty-style {
+   font-weight: 300;
+   font-size: 24px;
+   line-height: 29px;
+}
+
+.loyalty-text {
+   margin-top: 22px;
+}
+
+.loyalty-menu {
+   padding: 5px 0 0 42px;
+}
+
+.loyalty-menu-item {
+   position: relative;
+   margin-top: 16px;
+}
+
+.loyalty-menu-item::before {
+   content: "";
+   width: 20px;
+   height: 16px;
+   position: absolute;
+   top: 8px;
+   left: -42px;
+   background: url(../img/icon-menu-registration.svg);
 }
