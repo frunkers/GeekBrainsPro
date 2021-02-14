@@ -440,7 +440,11 @@
 
 .section-subcribe {
    padding: 100px 0 148px 0;
+<<<<<<< HEAD
    background: url(../img/subscribe.png) no-repeat center center;
+=======
+   background: url(../img/subscribe.png) no-repeat center;
+>>>>>>> 29890d0 (add registration.html)
 }
 
 .section-subcribe-container {
@@ -549,7 +553,10 @@
 }
 
 .page-footer-container {
+<<<<<<< HEAD
    height: 80px;
+=======
+>>>>>>> 29890d0 (add registration.html)
    padding: 24px 0;
    display: flex;
    align-items: center;
