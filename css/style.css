@@ -1365,3 +1365,122 @@
       margin-top: 32px;
    }
 }
+
+/* ===== @media 375px ===== */
+
+@media (max-width: 375px) {
+   .container {
+      max-width: 360px;
+   }
+
+   .page-header-container {
+      padding: 0 8px;
+   }
+
+   .page-header-menu-icon-item:nth-child(2),
+   .page-header-menu-icon-item:nth-child(3) {
+      display: none;
+   }
+
+   .first-screen-title {
+      font-size: 38px;
+      line-height: 46px;
+   }
+
+   .first-screen-title::before {
+      top: 7px;
+      height: 60px;
+   }
+
+   .first-screen-sub-title {
+      font-size: 20px;
+      line-height: 24px;
+   }
+
+   .first-screen-container {
+      background-image: none;
+      justify-content: center;
+   }
+
+   .offer-block {
+      padding: 0 0 0 30px;
+   }
+
+   /* === */
+
+   .section-common {
+      margin-top: 35px;
+   }
+
+   .section-common-block-gender {
+      padding: 0 8px 0 8px;
+   }
+
+   .section-common-block {
+      width: 100%;
+      height: 248px;
+      margin-top: 32px;
+   }
+
+   .gender-card-accesories {
+      width: 100%;
+      height: 116px;
+   }
+
+   /* === */
+
+   .section-items {
+      margin-top: 65px;
+   }
+
+   .text-items {
+      margin-top: 2px;
+      padding-bottom: 65px;
+   }
+
+   .button-items-link {
+      margin: 40px auto 0 auto;
+   }
+
+   /* === */
+
+   .section-advantages {
+      margin-top: 95px;
+   }
+
+   .advantages-menu {
+      padding: 24px 0 56px 0;
+   }
+
+   /* === */
+
+   .subscribe-block-wrapper {
+      margin-top: 60px;
+   }
+
+   .section-subcribe {
+      padding: 64px 0 110px 0;
+      background: url(../img/subscribe.png) no-repeat left 27% top 166px;
+      background-color: var(--bg-subscribe);
+   }
+
+   .subscribe-block-text {
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+   .email-form-subcribe-wrapper {
+      width: 340px;
+      margin: 22px auto 0 auto;
+   }
+
+   .email-subcribe {
+      width: 340px;
+   }
+
+   .page-footer-container {
+      height: 145px;
+      padding: 45px 0 10px 0;
+      flex-direction: column-reverse;
+   }
+}
