@@ -1260,6 +1260,7 @@
    .section-subcribe {
       background: url(../img/subscribe.png) no-repeat left 25% top 72px;
       background-size: cover;
+      background: var(--bg-subscribe);
       padding: 64px 0 140px 0;
    }
 
@@ -1274,5 +1275,19 @@
 
    .page-footer-container {
       padding: 0 32px;
+   }
+
+   /* === catalog html === */
+
+   .section-filter-container {
+      padding: 50px 16px;
+   }
+
+   .section-items-catalog {
+      margin-top: 0;
+   }
+
+   .block-items-card-none {
+      display: none;
    }
 }
