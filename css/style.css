@@ -1345,4 +1345,23 @@
    .block-total {
       margin-top: 104px;
    }
+
+   /* === */
+
+   .section-registration {
+      margin: 40px 0 96px 0;
+   }
+
+   .block-loyalty {
+      padding-left: 22px;
+   }
+
+   .loyalty-style {
+      font-size: 16px;
+      line-height: 19px;
+   }
+
+   .loyalty-text {
+      margin-top: 32px;
+   }
 }
