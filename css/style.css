@@ -1483,4 +1483,48 @@
       padding: 45px 0 10px 0;
       flex-direction: column-reverse;
    }
+
+   /* === */
+
+   .section-arrivals {
+      padding: 25px 0 45px 0;
+   }
+
+   .section-arrivals-container {
+      justify-content: center;
+      flex-wrap: wrap;
+   }
+
+   .text-arrivals {
+      padding-bottom: 32px;
+   }
+
+   /* === */
+
+   .section-filter-container {
+      padding: 25px 0 16px 0;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .filter-wearing {
+      display: none;
+   }
+
+   .size-wearing-wrap {
+      margin-left: 0;
+   }
+
+   .wearing-list {
+      font-size: 12px;
+      line-height: 14px;
+   }
+
+   .section-items-catalog {
+      margin-top: 0;
+   }
+
+   .arrivals-menu-item-link-m {
+      margin-left: 0;
+   }
 }
