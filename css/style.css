@@ -1643,7 +1643,18 @@
    /* === */
 
    .section-arrivals-cart {
-      padding: 50px 0 38px 0;
+      padding: 60px 0 28px 0;
       margin-bottom: 8px;
+   }
+
+   /* === */
+
+   .section-registration-container {
+      flex-wrap: wrap;
+   }
+
+   .block-loyalty {
+      padding-left: 0;
+      padding-top: 40px;
    }
 }
