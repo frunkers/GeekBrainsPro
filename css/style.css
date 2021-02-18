@@ -1657,4 +1657,11 @@
       padding-left: 0;
       padding-top: 40px;
    }
+
+   /* === */
+
+   .svg-filter {
+      width: 38px;
+      height: 25px;
+   }
 }
